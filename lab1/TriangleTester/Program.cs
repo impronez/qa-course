@@ -34,17 +34,11 @@ namespace TriangleTester
 					try
 					{
 						string[] parts = line.Split(' ');
-						if (parts.Length != 4)
-						{
-							writer.WriteLine(Error);
-							continue;
-						}
+						string expectedProgramResult = parts.Last();
 
 						string[] numbers = parts.Take(3).ToArray();
 
-						string expectedProgramResult = parts.Last();
-
-						string arguments = $"{numbers[0]} {numbers[1]} {numbers[2]}";
+						string arguments = line.Replace(expectedProgramResult, "");
 
 						string programResult = RunProgram(ExePath, arguments);
 

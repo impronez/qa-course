@@ -64,9 +64,23 @@
 			if (args.Length != 3)
 				return false;
 
-			if (double.TryParse(args[0], out double side1) && side1 > 0 &&
-				double.TryParse(args[1], out double side2) && side2 > 0 &&
-				double.TryParse(args[2], out double side3) && side3 > 0)
+			if (double.TryParse(args[0], System.Globalization.CultureInfo.InvariantCulture, out double side1)
+					&& side1 > 0 && side1 <= Double.MaxValue &&
+					double.TryParse(args[1], System.Globalization.CultureInfo.InvariantCulture, out double side2)
+					&& side2 > 0 && side2 <= Double.MaxValue &&
+					double.TryParse(args[2], System.Globalization.CultureInfo.InvariantCulture, out double side3)
+					&& side3 > 0 && side3 <= Double.MaxValue)
+			{
+				triangle = new Triangle(side1, side2, side3);
+				return true;
+			}
+
+			if (double.TryParse(args[0], out side1)
+					&& side1 >= 0 && side1 <= Double.MaxValue &&
+					double.TryParse(args[1], out side2)
+					&& side2 >= 0 && side2 <= Double.MaxValue &&
+					double.TryParse(args[2], out side3)
+					&& side3 >= 0 && side3 <= Double.MaxValue)
 			{
 				triangle = new Triangle(side1, side2, side3);
 				return true;
