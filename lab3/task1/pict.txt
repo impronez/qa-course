@@ -1,0 +1,51 @@
+City: Moscow, Kazan, Vladivostok
+Credit goal: NewBuilding, SecondaryHousing,  HouseBuilding, Other
+Program type: Base, FamilyWithChildren, FarEasternAndArctic, IT, LandPlot
+Cost: 1700000, 30000000, 100000000
+Term: 1, 10, 30
+Maternity capital: Yes, No
+Maternity capital Size: 0, 1000, 416000, 912162
+VTB Current salary card: Yes, No
+Digital services: Yes, No
+Salary client: Yes, No
+Insurance: Yes, No
+Transfer salary: Yes, No
+Credit available: Yes, No
+
+# Conditions of credits goal
+if [Credit goal] = "NewBuilding" then [Program type] in {"Base", "FamilyWithChildren", "FarEasternAndArctic", "IT"};
+if [Credit goal] = "SecondaryHousing" then [Program type] in {"Base", "FarEasternAndArctic", "LandPlot"};
+if [Credit goal] = "HouseBuilding" then [Program type] in {"Base", "FamilyWithChildren"};
+if [Credit goal] = "Other" then [Program type] = "Base";
+
+# Maternity capital
+if [Credit goal] = "Other" then [Maternity capital] = "No";
+if [Maternity capital] = "Yes" THEN [Maternity capital Size] <> 0;
+
+# HouseBuilding
+if [Credit goal] = "HouseBuilding" then [Transfer salary] = "No" and [Digital services] = "No";
+
+if [Credit goal] = "Other" then [Transfer salary] = "No";
+
+if [Digital services] = "Yes" then [VTB Current salary card] = "No";
+
+if [Transfer salary] = "Yes" then [VTB Current salary card] = "No" and [Digital services] = "No";
+
+if [VTB Current salary card] = "Yes" then [Digital services] = "No" and [Transfer salary] = "No";
+
+if [Program type] in { "Base",  "FarEasternAndArctic", "IT", "LandPlot"} then [Salary client] = "No";
+
+if [Credit goal] = "HouseBuilding" then [Salary client] = "No";
+
+# VTB Current salary card
+if ([Credit goal] = "NewBuilding" and [Program type] in {"FamilyWithChildren", "FarEasternAndArctic", "IT", "LandPlot"}) or ([Credit goal] = "SecondaryHousing" and [Program type] = "FarEasternAndArctic") or ([Credit goal] = "HouseBuilding" and [Program type] = "FamilyWithChildren") then [VTB Current salary card] = "No";
+
+# Transfer salary
+if ([Credit goal] = "NewBuilding" and [Program type] in {"FamilyWithChildren", "FarEasternAndArctic", "IT", "LandPlot"}) or ([Credit goal] = "SecondaryHousing" and [Program type] = "FarEasternAndArctic") or ([Credit goal] = "HouseBuilding") then [Transfer salary] = "No";
+
+# Digital services
+if ([Credit goal] = "NewBuilding" and [Program type] in {"FamilyWithChildren", "FarEasternAndArctic", "IT", "LandPlot"}) or ([Credit goal] = "SecondaryHousing" and [Program type] = "FarEasternAndArctic") or ([Credit goal] = "HouseBuilding" and [Program type] = "Base") then [Digital services] = "No";
+
+#City and FarEasternAndArctic program type
+if [City] in {"Moscow", "Kazan"} and [Program type] = "FarEasternAndArctic" then [Credit available] = "No" else [Credit available] = "Yes";
+
