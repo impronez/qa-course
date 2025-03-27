@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessor", "OrderProcessor.csproj", "{42CD020A-9B98-400A-AC21-2F895BD4B043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessorTests", "..\OrderProcessorTests\OrderProcessorTests.csproj", "{2429A990-1C40-4B45-AB26-28DB976FE27E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42CD020A-9B98-400A-AC21-2F895BD4B043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CD020A-9B98-400A-AC21-2F895BD4B043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CD020A-9B98-400A-AC21-2F895BD4B043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CD020A-9B98-400A-AC21-2F895BD4B043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2429A990-1C40-4B45-AB26-28DB976FE27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2429A990-1C40-4B45-AB26-28DB976FE27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2429A990-1C40-4B45-AB26-28DB976FE27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2429A990-1C40-4B45-AB26-28DB976FE27E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
