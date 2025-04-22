@@ -1,0 +1,90 @@
+{
+  "valid": {
+    "category_id": "1",
+    "title": "chasiki-tik-tak",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "0"
+  },
+  "valid_with_rus_title": {
+    "category_id": "1",
+    "title": "Валидный русский заголовок",
+    "content": "Сибирь, тайга",
+    "price": "10",
+    "old_price": "1000",
+    "status": "1",
+    "keywords": "Что-то",
+    "description": "Былое описание",
+    "hit": "0"
+  },
+  "invalid_by_category_id_less": {
+    "category_id": "0",
+    "title": "InvalidProductByCategoryLess",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "0"
+  },
+  "invalid_by_category_id_more": {
+    "category_id": "160",
+    "title": "InvalidProductByCategoryMore",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "0"
+  },
+  "invalid_by_status_less": {
+    "category_id": "1",
+    "title": "InvalidProductByStatusLess",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "-1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "0"
+  },
+  "invalid_by_status_more": {
+    "category_id": "1",
+    "title": "InvalidProductByStatusMore",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "2",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "0"
+  },
+  "invalid_by_hit_less": {
+    "category_id": "1",
+    "title": "InvalidProductByHitLess",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "-1"
+  },
+  "invalid_by_hit_more": {
+    "category_id": "1",
+    "title": "InvalidProductByHitMore",
+    "content": "ValidProductContent",
+    "price": "100",
+    "old_price": "150",
+    "status": "1",
+    "keywords": "Something",
+    "description": "Description",
+    "hit": "2"
+  }
+}

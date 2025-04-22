@@ -1,0 +1,37 @@
+{
+  "valid_edited": {
+    "category_id": "1",
+    "title": "chasiki-tik-tak-edit",
+    "content": "ValidProductContentEdited",
+    "price": "1000",
+    "old_price": "100",
+    "status": "0",
+    "keywords": "SomethingEdit",
+    "description": "DescriptionEdit",
+    "hit": "1"
+  },
+  "valid_with_not_existing_id": {
+    "id": "11111123",
+    "category_id": "2",
+    "title": "NewWatchTitle",
+    "alias": "newwatchtitle",
+    "content": "ContentContent",
+    "price": "200",
+    "old_price": "150",
+    "status": "0",
+    "keywords": "SomethingNew",
+    "description": "DescriptionNew",
+    "hit": "1"
+  },
+  "valid_without_id": {
+    "category_id": "2",
+    "title": "NewwwwItemTitleWithoutId",
+    "content": "ContentContent",
+    "price": "250",
+    "old_price": "250",
+    "status": "0",
+    "keywords": "SomethingNew",
+    "description": "DescriptionNew",
+    "hit": "1"
+  }
+}
